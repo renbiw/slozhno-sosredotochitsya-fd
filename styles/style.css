@@ -1,5 +1,156 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
+  background-color: var(--bg-color);
+  background-attachment: fixed;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: center;
+  padding: 73px 10px 66px;
+  margin-block-end: 40px;
+  min-height: 668px;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #353430;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color:  #353430;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 11px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+}
+
+.header__title {
+
+}
+
+.title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.header__slogan {
+  font-size: 18px;
+  line-height: 23.4px;
+  align-self: end;
+}
+
+.content-section {
+  display: grid;
+  padding-block-end: 50px;
+  line-height: 23.4px;
+}
+
+.content-section__list {
+  display: grid;
+  gap: 20px;
+}
+
+.content-section__title {
+  font-size: 18px;
+  margin-block-end: 20px;
+}
+
+.card__title {
+  font-size: 18px;
+
+}
+
+.card__description {
+  padding-block-start: 10px;
+}
+
+.card__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.title-tink {
+  font-weight: 400;
+}
+
+.section-images__list {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.section-images__picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  margin-block-start: 50px;
+  display: grid;
+  padding: 286px 5px;
+}
+
+.footer__text {
+  font-weight: 700;
+}
+
+@media (width >= 768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .content-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  
 }
