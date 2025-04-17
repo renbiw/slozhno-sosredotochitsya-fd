@@ -19,6 +19,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
+      <p aria-hidden="true" class="header__decor-element">rec</p>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -83,9 +84,9 @@
           </li>
         </ul>
       </section>
-      <section class="content-section">
-        <h2 class="content-section__title">Что снижает концентрацию внимания?</h2>
-        <ul class="content-section__list">
+      <section class="content-section section-concentration">
+        <h2 class="content-section__title section-concentration__title">Что снижает концентрацию внимания?</h2>
+        <ul class="content-section__list section-concentration__list">
           <li class="content-section__item">
             <article class="content-section__card">
               <h3 class="card__title title-decor">Многозадачность</h3>
@@ -128,7 +129,7 @@
         <ul class="content-section__list">
           <li class="content-section__item">
             <article class="content-section__card">
-              <h3 class="card__title title-decor title-tink">Представьте небо и облака</h3>
+              <h3 class="card__title title-decor title-thin">Представьте небо и облака</h3>
               <p class="card__description">Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. 
                 Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные
                  задачи делать. В такие моменты можно закрыть глаза и представить, что чистое небо — это вы, 
@@ -140,7 +141,7 @@
           </li>
           <li class="content-section__item">
             <article class="content-section__card">
-              <h3 class="card__title title-decor title-tink">Включите музыку</h3>
+              <h3 class="card__title title-decor title-thin">Включите музыку</h3>
               <p class="card__description">Но не любую, и не любимую. Любимая может быть связана с сильными положительными эмоциями,
                  которые тоже очень сильно отвлекают. Подойдёт тихая, спокойная, умеренно-ритмичная. 
                  Можно вообще попробовать включить плейлист c «белым шумом» или нейромузыкой.
@@ -149,7 +150,7 @@
           </li>
           <li class="content-section__item">
             <article class="content-section__card">
-              <h3 class="card__title title-decor title-tink">Прогуляйтесь</h3>
+              <h3 class="card__title title-decor title-thin">Прогуляйтесь</h3>
               <p class="card__description">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a class="card__link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328">показал</a>, 
                 что созерцание природы повышает концентрацию, в то время как после просмотра городских 
                 пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями 
@@ -160,7 +161,7 @@
           </li>
           <li class="content-section__item">
             <article class="content-section__card">
-              <h3 class="card__title title-decor title-tink">Хорошо ешьте</h3>
+              <h3 class="card__title title-decor title-thin">Хорошо ешьте</h3>
               <p class="card__description">Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые препятствуют
                  резким скачкам сахара в крови. Например, с высоким содержанием клетчатки: овощи, ягоды, 
                  бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
@@ -169,7 +170,7 @@
           </li>
           <li class="content-section__item">
             <article class="content-section__card">
-              <h3 class="card__title title-decor title-tink">Читайте</h3>
+              <h3 class="card__title title-decor title-thin">Читайте</h3>
               <p class="card__description">Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост
                  в соцсети, достаточно нескольких минут или даже секунд. А вот интересная книга
                   способна затянуть и на несколько часов и круто тренирует направленное внимание.
@@ -180,33 +181,13 @@
       </section>
       <section class="section-images">
         <p class="section-images__text title-decor">А можно в картинках?</p>
-        <ul class="section-images__list">
-          <li class="section-images__item">
-            <article class="section-images__card">
-              <img class="section-images__picture" src="./images/sunset.png" alt="Закатный пейзаж в розовых и фиолетовых оттенках" loading="lazy" />
-            </article>
-          </li>
-          <li class="section-images__item">
-            <article class="section-images__card">
-              <img class="section-images__picture" src="./images/ice-cream.png" alt="Картинка с шариками мороженого" loading="lazy" />
-            </article>
-          </li>
-          <li class="section-images__item">
-            <article class="section-images__card">
-              <img class="section-images__picture" src="./images/tape.png" alt="Картинка с магнитофонной касетой " loading="lazy" />
-            </article>
-          </li>
-          <li class="section-images__item">
-            <article class="section-images__card">
-              <img class="section-images__picture" src="./images/books.png" alt="Картинка со стопкой книг и кружкой на книгах" loading="lazy" />
-            </article>
-          </li>
-          <li class="section-images__item">
-            <article class="section-images__card">
-              <img class="section-images__picture" src="./images/street.png" alt="Уличный пейзаж в фиолетовых оттенках" loading="lazy" />
-            </article>
-          </li>
-        </ul>
+        <div class="section-images__gallery">
+          <img class="section-images__picture section-images__sunset" src="./images/sunset.png" alt="Закатный пейзаж в розовых и фиолетовых оттенках" loading="lazy" />
+          <img class="section-images__picture section-images__icecream" src="./images/ice-cream.png" alt="Картинка с шариками мороженого" loading="lazy" />
+          <img class="section-images__picture section-images__tape" src="./images/tape.png" alt="Картинка с магнитофонной касетой " loading="lazy" />
+          <img class="section-images__picture section-images__books" src="./images/books.png" alt="Картинка со стопкой книг и кружкой на книгах" loading="lazy" />
+          <img class="section-images__picture section-images__street" src="./images/street.png" alt="Уличный пейзаж в фиолетовых оттенках" loading="lazy" />
+        </div>
       </section>
     </main>
     <footer class="footer decorated-zone">  

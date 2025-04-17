@@ -1,9 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
   background-color: var(--bg-color);
   background-attachment: fixed;
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
+  color: var(--text-color);
   padding-left: 10px;
   padding-right: 10px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
@@ -15,9 +19,35 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: center;
-  padding: 73px 10px 66px;
+  padding: 74px 0 66px;
   margin-block-end: 40px;
   min-height: 668px;
+  color: var(--header-text-color);
+}
+
+.header__decor-element {
+  display: none;
+}
+
+.header__theme-menu-item {
+  border: 1px solid transparent;
+}
+
+.header__theme-menu-item:hover {
+  border-color: var(--border-color);
+}
+
+.header__theme-menu-item:focus-visible {
+  text-decoration: underline;
+}
+
+.header__theme-menu-item:has(.header__theme-menu-button_active) {
+  border-color: var(--header-text-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button {
+  padding: 1.5px 13px 4.5px;
 }
 
 .decorated-zone {
@@ -33,7 +63,7 @@
   block-size: 25px;
   border-width: 1px 1px 0px 0px;
   border-style: solid;
-  border-color: #353430;
+  border-color: var(--header-text-color);
 }
 
 .decorated-zone::after {
@@ -45,7 +75,7 @@
   block-size: 25px;
   border-width: 0px 0px 1px 1px;
   border-style: solid;
-  border-color:  #353430;
+  border-color: var(--header-text-color);
 }
 
 .header__theme-menu {
@@ -54,17 +84,14 @@
 
 .header__theme-menu-list {
   display: grid;
-  gap: 11px;
+  gap: 8px;
 }
 
 .header__theme-menu-button {
   text-transform: lowercase;
   background-color: transparent;
   border: none;
-}
-
-.header__title {
-
+  line-height: 18px;
 }
 
 .title {
@@ -79,8 +106,10 @@
 }
 
 .header__slogan {
+  display: block;
   font-size: 18px;
   line-height: 23.4px;
+  font-weight: 700;
   align-self: end;
 }
 
@@ -114,11 +143,24 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.title-tink {
+.card__link:hover {
+  text-decoration: underline;
+}
+
+.card__link:focus-visible {
+  border: 1px solid var(--text-color);
+}
+
+.title-thin {
   font-weight: 400;
 }
 
-.section-images__list {
+.section-images__text {
+  margin-block-end: 10px;
+  font-weight: 700;
+}
+
+.section-images__gallery {
   display: grid;
   grid-template-rows: 1fr;
   gap: 10px;
@@ -133,7 +175,7 @@
 }
 
 .footer {
-  margin-block-start: 50px;
+  margin-block-start: 40px;
   display: grid;
   padding: 286px 5px;
 }
@@ -143,14 +185,150 @@
 }
 
 @media (width >= 768px) {
+
+  .page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header {
+    min-height: 1024px;
+    padding: 190px 0 183px;
+    margin-block-end: 60px;
+    padding-right: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
   .header__title {
+    justify-self: start;
+  }
+
+  .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
+  .header__slogan {
+    max-inline-size: 364px;
+    justify-self: end;
+  }
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .content-section {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 40px;
+    padding-block-end: 80px;
+  }
+
+  .content-section__list {
+    grid-column: 2 / 4;
+  }
+  
+  .content-section__title {
+    margin-block-end: 0;
+  }
+  .section-concentration__list {
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+  }
+  
+  .content-section__title + .title-decor {
+    grid-column: 2 / 4;
+  }
+
+  .section-concentration {
+    grid-template-columns: 1fr;
+  }
+
+  .section-concentration__title {
+    grid-column: 1 / 4;
+    max-width: 236px;
+  }
+
+  .section-images__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3);
+  }
+
+  .section-images__sunset {
+    grid-column: 1 / 3;
+    grid-row: 1 / auto;
+  }
+
+  .section-images__icecream {
+    grid-column: 3 / auto;
+    grid-row: 1 / 3;
+  }
+  .section-images__tape {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .section-images__books {
+    grid-column: 2 / auto;
+    grid-row: 2 / auto;
+  }
+
+  .section-images__street {
+    grid-column: 2 / 4;
+    grid-row: 3 / auto;
+  }
+
+  .section-images__text {
+    margin-block-end: 20px;
+  }
+
+  .footer {
+    padding-block-end: 462px;
+    padding-block-start: 462px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer__text {
+    text-align: center;
   }
 }
 
 @media (width >= 1024px) {
-  
+  .header {
+    min-height: 768px;
+    padding: 21.5px 0 20px;
+    margin-block-end: 60px;
+  }
+
+  .header__theme-menu-list {
+    grid-auto-flow: column;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+  }
+
+  .header__slogan {
+    max-inline-size: 491px;
+    align-self: center;
+  }
+
+  .section-concentration__list {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .footer {
+    padding-block-end: 319px;
+    padding-block-start: 319px;
+  }
 }

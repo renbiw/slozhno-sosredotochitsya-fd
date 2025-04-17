@@ -5,6 +5,13 @@
 */
 
 :root.theme-dark {
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --title-color: #db00ff; 
+  --bg-image: url('../images/cover-image-dark.png');
+  --border-color: rgb(255, 0, 112, 0.4);
+  --header-text-color: #ff0070;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -12,5 +19,30 @@
 }
 
 .theme-dark .page {
+  .header__decor-element {
+    display: block;
+    text-transform: uppercase;
+    inline-size: 33px;
+    block-size: 26px;
+    position: absolute;
+    right: 28px;
+    top: 20px;
+    color: var(--accent-color);
+  }
+  
+  .header__decor-element::after {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left:43px;
+    content: "";
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--accent-color);
+    }
+
+    .title-decor {
+      color:  var(--bg-color);
+    }
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
