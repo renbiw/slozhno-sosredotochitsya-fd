@@ -5,6 +5,13 @@
 */
 
 :root.theme-light {
+  --bg-color: #fff1f7;
+  --text-color: #353430;
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --bg-image: url('../images/cover-image-light.png');
+  --border-color: #32312d66;
+  --header-text-color: #353430;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
