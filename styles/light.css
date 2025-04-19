@@ -19,5 +19,8 @@
 }
 
 .theme-light .page {
+  .header__decor-element {
+    display: none;
+  }
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
