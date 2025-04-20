@@ -22,5 +22,13 @@
   .header__decor-element {
     display: none;
   }
+
+  .title-decor {
+    --bg-color: #353430;
+  }
+
+  .content-section > .content-section__title:not(.title-decor) {
+   --accent-color: #353430;
+  }
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
