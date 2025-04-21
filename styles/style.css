@@ -51,7 +51,7 @@
   border-block-end-color: var(--header-text-color);
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   border: 1px solid var(--header-text-color);
   pointer-events: none;
 }
